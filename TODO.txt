@@ -1,3 +1,6 @@
+- Turn this into GitHub issues.
 - Create Homebrew formula.
+- Allow interactive usage.
 - Create Debian/Ubuntu package.
 - Support Windows (Cygwin / mingw) somehow.
+- Maybe rename MISC.md to FAQ.md.

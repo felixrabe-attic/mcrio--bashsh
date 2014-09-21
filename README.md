@@ -13,13 +13,59 @@ Installation
 Usage
 -----
 
-Unusable at the moment.
+The following shebang
 
-Version 0.0.1 is just about getting the project started.
+    #!/usr/bin/env bashsh-0
+
+gives you:
+
+-   `set -e` by default:
+
+        echo hello ; false ; echo world
+
+    will only print `hello`.
+
+-   `CMD` for showing executed commands in bold on stderr:
+
+        CMD git status
+
+-   `CMD_STR` prints the string in bold on stderr and runs it with `eval`:
+
+        CMD_STR 'gitk --all &'
+
+-   `MSG` prints a remark in bold on stderr, formatted as a comment:
+
+        MSG hello world
+
+    prints `# hello world`.
+
+-   `READ_P` works like `read -p` but prints the first parameter using `MSG`:
+
+        READ_P 'What is your name? ' your_name
+
+-   `QUOTED` prints the given arguments in a way that is safe to pass to commands:
+
+        echo "My arguments are: $(QUOTED "$@")"
+
+You can find a few examples in the [examples](./examples) directory.
 
 
-[Working on Bashsh](./CONTRIBUTING.md)
---------------------------------------
+Caveats / known limitations
+---------------------------
+
+You **cannot** just
+
+    npm install bashsh
+
+and then use
+
+    #!/usr/bin/env ./node_modules/.bin/bashsh-0
+
+as the path of the command supplied to `env` will be interpreted as relative to the working directory, not to the script's directory.
+
+
+Working on Bashsh
+-----------------
 
 If you would like to work on Bashsh, [CONTRIBUTING.md](./CONTRIBUTING.md) should give you the most important information to get you started quickly.
 

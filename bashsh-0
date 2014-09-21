@@ -1,3 +1,44 @@
 #!/usr/bin/env bash
 
-echo Version 0
+# DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+DIR="$( cd "$( dirname "$1" )" && pwd )"
+
+set -e
+
+# http://misc.flogisoft.com/bash/tip_colors_and_formatting
+# http://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux#comment24883926_5947802
+bold='\033[1m'
+normal='\033[0m'
+
+function QUOTED() {
+  echo "$(printf "%q " "$@")"
+}
+
+function CMD_STR() {
+  echo -ne "$bold" >&2
+  echo "$@" >&2
+  echo -ne "$normal" >&2
+  eval "$@"
+}
+
+function CMD() {
+  CMD_STR "$(QUOTED "$@")"
+}
+
+function MSG() {
+  echo -ne "$bold" >&2
+  echo "# $@" >&2
+  echo -ne "$normal" >&2
+}
+
+function READ_P() {
+  echo -ne "$bold" >&2
+  echo -n "# $1"
+  echo -ne "$normal" >&2
+  shift
+  read "$@" >&2
+}
+
+_program=$1
+shift
+. "$_program"

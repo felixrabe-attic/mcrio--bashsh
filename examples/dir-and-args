@@ -1,0 +1,5 @@
+#!/usr/bin/env bashsh-0
+
+echo "My directory is: '$DIR'"
+
+echo "My arguments are: $(QUOTED "$@")"
