@@ -1,0 +1,5 @@
+#!/usr/bin/env bashsh-0
+
+# This demonstrates that `set -e` is set by default:
+
+echo hello ; false ; echo world
