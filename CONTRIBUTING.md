@@ -30,6 +30,14 @@ The policy for testing is: There is no version 1 without a full test suite!
 I will probably make it self-hosting, using Bashsh-0 to test Bashsh-1. :)
 
 
+Publishing a new release
+------------------------
+
+    npm version patch  # minor, major
+    git push origin master
+    npm publish
+
+
 Motivation and historical background
 ------------------------------------
 
