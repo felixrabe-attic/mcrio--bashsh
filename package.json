@@ -1,1 +1,26 @@
-{}
+{
+  "name": "bashsh",
+  "productName": "Bashsh",
+  "version": "0.0.0",
+  "description": "Improves your Bash scripts",
+  "bin": {
+    "bashsh": "./bashsh",
+    "bashsh-0": "./bashsh-0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mcrio/bashsh.git"
+  },
+  "keywords": [
+    "bash"
+  ],
+  "author": "Felix Rabe <felix@rabe.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mcrio/bashsh/issues"
+  },
+  "homepage": "https://github.com/mcrio/bashsh"
+}

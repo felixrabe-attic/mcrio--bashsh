@@ -1,0 +1,3 @@
+- Create Homebrew formula.
+- Create Debian/Ubuntu package.
+- Support Windows (Cygwin / mingw) somehow.
