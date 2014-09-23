@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 
-# DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-DIR="$( cd "$( dirname "$1" )" && pwd )"
-
 set -e
+
+if [[ "$0" = "${BASH_SOURCE[0]}" ]] ; then  # '#!/usr/bin/env bashsh-0'
+  DIR="$( cd "$( dirname "$1" )" && pwd )"
+else  # 'source bashsh-0'
+  DIR="$( cd "$( dirname "${BASH_SOURCE[1]}" )" && pwd )"
+fi
 
 # http://misc.flogisoft.com/bash/tip_colors_and_formatting
 # http://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux#comment24883926_5947802
@@ -39,6 +42,8 @@ function READ_P() {
   read "$@" >&2
 }
 
-_program=$1
-shift
-. "$_program"
+if [[ "$0" = "${BASH_SOURCE[0]}" ]] ; then  # '#!/usr/bin/env bashsh-0'
+  _program=$1
+  shift
+  . "$_program"
+fi
