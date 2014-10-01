@@ -22,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/mcrio/bashsh/issues"
   },
-  "homepage": "https://github.com/mcrio/bashsh"
+  "homepage": "https://github.com/mcrio/bashsh",
+  "_bpkg_section_begin": 0,
+  "global": true,
+  "install": "./install.sh bpkg",
+  "_bpkg_section_end__": 0,
+  "_this_is_the_last_thing": true
 }

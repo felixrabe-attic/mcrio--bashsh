@@ -4,10 +4,16 @@ Bashsh
 Improves your Bash scripts.
 
 
-Installation
-------------
+Installation via NPM
+--------------------
 
     npm install -g bashsh
+
+
+Installation via bpkg
+---------------------
+
+    bpkg install -g mcrio/bashsh
 
 
 Usage
