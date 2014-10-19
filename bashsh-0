@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-set -e
+set -o errexit
+set -o nounset
 
 if [[ "$0" = "${BASH_SOURCE[0]}" ]] ; then  # '#!/usr/bin/env bashsh-0'
   DIR="$( cd "$( dirname "$1" )" && pwd )"
