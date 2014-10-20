@@ -11,7 +11,12 @@ fi
 
 # http://misc.flogisoft.com/bash/tip_colors_and_formatting
 # http://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux#comment24883926_5947802
-bold='\033[1m'
+if [[ "$(uname -s)" = "Darwin" -o "$(uname -s)" = "Linux" ]] ; then
+  bold='\033[1m'
+else
+  # Make it a different color on Windows:
+  bold='\033[38;5;172m'
+fi
 normal='\033[0m'
 
 function QUOTED() {
