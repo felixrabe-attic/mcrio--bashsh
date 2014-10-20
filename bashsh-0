@@ -11,7 +11,7 @@ fi
 
 # http://misc.flogisoft.com/bash/tip_colors_and_formatting
 # http://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux#comment24883926_5947802
-if [[ "$(uname -s)" = "Darwin" -o "$(uname -s)" = "Linux" ]] ; then
+if [[ "$(uname -s)" = "Darwin" || "$(uname -s)" = "Linux" ]] ; then
   bold='\033[1m'
 else
   # Make it a different color on Windows:
