@@ -34,6 +34,12 @@ function CMD() {
   CMD_STR "$(QUOTED "$@")"
 }
 
+function ECHO() {
+  echo -ne "$bold" >&2
+  echo "$@" >&2
+  echo -ne "$normal" >&2
+}
+
 function MSG() {
   echo -ne "$bold" >&2
   echo "# $@" >&2

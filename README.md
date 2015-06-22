@@ -39,6 +39,11 @@ gives you:
 
         CMD_STR 'gitk --all &'
 
+-   `ECHO` prints the string in bold on stderr:
+
+        ECHO wget ... example.com
+        wget --cookies=on --load-cookies wget-tmp/cookies.txt --keep-session-cookies --save-cookies wget-tmp/cookies.txt example.com
+
 -   `MSG` prints a remark in bold on stderr, formatted as a comment:
 
         MSG hello world
