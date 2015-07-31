@@ -58,7 +58,7 @@ gives you:
 
         echo "My arguments are: $(QUOTED "$@")"
 
-You can find a few examples in the [examples](./examples) directory.
+You can find a few examples in the [examples](./examples) directory. Also, my [~/bin](https://github.com/felixrabe/bin) directory makes heavy use of this project.
 
 
 Caveats / known limitations
