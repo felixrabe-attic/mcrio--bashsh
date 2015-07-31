@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-echo 'ERROR: You have to specify a version to ensure compatibility.' >&2
+echo 'ERROR: Bashsh must be run with an explicit version number.' >&2
 echo 'The current version is bashsh-0.' >&2
 exit 1
