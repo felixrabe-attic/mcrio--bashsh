@@ -6,6 +6,7 @@ set -o nounset
 if [[ "$0" = "${BASH_SOURCE[0]}" ]] ; then  # '#!/usr/bin/env bashsh-0'
   DIR="$( cd "$( dirname "$1" )" && pwd )"
 else  # 'source bashsh-0'
+  # DIR="$( cd "$( dirname "${BASH_SOURCE[1]:-}" )" && pwd )"
   DIR="$( cd "$( dirname "${BASH_SOURCE[1]}" )" && pwd )"
 fi
 
