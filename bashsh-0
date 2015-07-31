@@ -4,6 +4,15 @@ set -o errexit
 set -o nounset
 
 if [[ "$0" = "${BASH_SOURCE[0]}" ]] ; then  # '#!/usr/bin/env bashsh-0'
+  if [[ $# -eq 0 ]] ; then
+    echo 'ERROR: Bashsh must be run from a script.' >&2
+    echo >&2
+    echo 'Usage variants:' >&2
+    echo '  #!/usr/bin/env bashsh-0' >&2
+    echo 'or' >&2
+    echo '  source bashsh-0' >&2
+    exit 1
+  fi
   DIR="$( cd "$( dirname "$1" )" && pwd )"
 else  # 'source bashsh-0'
   # DIR="$( cd "$( dirname "${BASH_SOURCE[1]:-}" )" && pwd )"
