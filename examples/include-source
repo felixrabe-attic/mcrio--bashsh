@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+. bashsh-0
+MSG "$DIR"
