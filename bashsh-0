@@ -34,9 +34,7 @@ function QUOTED() {
 }
 
 function CMD_STR() {
-  echo -ne "$bold" >&2
-  echo "$@" >&2
-  echo -ne "$normal" >&2
+  ECHO "$@"
   eval "$@"
 }
 
@@ -51,15 +49,11 @@ function ECHO() {
 }
 
 function MSG() {
-  echo -ne "$bold" >&2
-  echo "# $@" >&2
-  echo -ne "$normal" >&2
+  ECHO "# $@"
 }
 
 function READ_P() {
-  echo -ne "$bold" >&2
-  echo -n "# $1" >&2
-  echo -ne "$normal" >&2
+  ECHO -n "# $1"
   shift
   read "$@" >&2
 }
