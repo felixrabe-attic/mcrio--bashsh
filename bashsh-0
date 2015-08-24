@@ -58,7 +58,7 @@ function MSG() {
 
 function READ_P() {
   echo -ne "$bold" >&2
-  echo -n "# $1"
+  echo -n "# $1" >&2
   echo -ne "$normal" >&2
   shift
   read "$@" >&2
