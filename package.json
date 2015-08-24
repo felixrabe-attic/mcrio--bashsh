@@ -1,7 +1,7 @@
 {
   "name": "bashsh",
   "productName": "Bashsh",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Improves your Bash scripts",
   "bin": {
     "bashsh": "./bashsh",
